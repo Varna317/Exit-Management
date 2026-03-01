@@ -1,0 +1,113 @@
+:root{
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #4f46e5;
+  --border: #e5e7eb;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  --radius: 18px;
+}
+
+/* Base */
+body{
+  background: var(--bg) !important;
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+/* Layout */
+.page{
+  max-width: 1100px;
+  margin: 18px auto;
+  padding: 0 14px 30px;
+}
+
+/* Card */
+.cardx{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Text helpers */
+.h1x{ font-size: 26px; font-weight: 900; letter-spacing: -0.3px; }
+.muted{ color: var(--muted); }
+
+/* Primary button */
+.btnx{
+  background: var(--primary);
+  border: none;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .05s ease, opacity .2s ease;
+}
+.btnx:hover{ opacity: .95; }
+.btnx:active{ transform: translateY(1px); }
+.btnx:disabled{ opacity:.65; cursor: not-allowed; }
+
+/* Inputs */
+.inputx{
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 12px;
+  outline: none;
+  width: 100%;
+  background: #fff;
+}
+.inputx:focus{
+  border-color: rgba(79,70,229,.55);
+  box-shadow: 0 0 0 4px rgba(79,70,229,.15);
+}
+
+/* Make Bootstrap cards match theme (optional but helps consistency) */
+.card{
+  border-radius: var(--radius) !important;
+}
+.shadow-sm, .shadow-lg{
+  box-shadow: var(--shadow) !important;
+}
+
+/* Make Bootstrap form controls match theme (so old pages still look good) */
+.form-control, .form-select{
+  border-radius: 14px !important;
+  border-color: var(--border) !important;
+  padding: 10px 12px !important;
+}
+.form-control:focus, .form-select:focus{
+  border-color: rgba(79,70,229,.55) !important;
+  box-shadow: 0 0 0 4px rgba(79,70,229,.15) !important;
+}
+
+/* Tables: cleaner */
+.table{
+  margin-bottom: 0 !important;
+}
+.table thead th{
+  background: #f8fafc;
+  border-bottom: 1px solid var(--border) !important;
+  font-weight: 900;
+  font-size: 13px;
+}
+.table td, .table th{
+  vertical-align: middle !important;
+  border-color: var(--border) !important;
+}
+
+/* Badges slightly nicer */
+.badge{
+  border-radius: 999px !important;
+  padding: 6px 10px !important;
+  font-weight: 900 !important;
+  letter-spacing: .2px;
+}
+
+/* Alerts softer */
+.alert{
+  border-radius: 14px !important;
+  border-color: var(--border) !important;
+}
